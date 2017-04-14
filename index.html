@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Construction - Free HTML Bootstrap Template</title>
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" href="custom-font/fonts.css" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <!-- Bootsnav -->
+        <link rel="stylesheet" href="css/bootsnav.css">
+        <!-- Fancybox -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />	
+        <!-- Custom stylesheet -->
+        <link rel="stylesheet" href="css/custom.css" />
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+		<script>
+		function SendEmail(){	
+		debugger;
+		var c_email =new RegExp("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+		
+		
+			if(c_email.test('#email')===true)
+			{
+			var data={
+			
+			Name:$("#name").val(),
+			
+			Email:$("#email").val(),
+			Message:$("#msg").val()
+			}
+			
+			$.ajax({
+			type: "POST",
+			url: "https://script.google.com/macros/s/AKfycbyP3AFF_eDm1hoOfEA-FsoSZxnwgaTUDeglN3hCGYZaCCQivuP_/exec",
+			data: data,
+			success: function (r) {
+			debugger;
+			if(r.result=="success")
+			{
+					$('#thankyou_message').show();
+					$('#contact_details').hide();
+				   
+					}
+				},
+			dataType: "json"
+			});
+			}
+			else{
+				alert("Please enter correct email.");
+			}
+		}
+		
+		</script>
+    </head>
+    <body>
+
+        <!-- Preloader -->
+
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--End off Preloader -->
+
+        <!-- Header -->
+        <header>
+            <!-- Top Navbar -->
+            <!--<div class="top_nav">
+                <div class="container">
+                    <ul class="list-inline info">
+                        <li><a href="#"><span class="fa fa-phone"></span> 1234 - 5678 - 9012</a></li>
+                        <li><a href="#"><span class="fa fa-envelope"></span> support@Construct.com</a></li>
+                        <li><a href="#"><span class="fa fa-clock-o"></span> Mon - Sat 9:00 - 19:00</a></li>
+                    </ul>
+                    <ul class="list-inline social_icon">
+                        <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                        <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                        <li><a href=""><span class="fa fa-behance"></span></a></li>
+                        <li><a href=""><span class="fa fa-dribbble"></span></a></li>
+                        <li><a href=""><span class="fa fa-linkedin"></span></a></li>
+                        <li><a href=""><span class="fa fa-youtube"></span></a></li>
+                    </ul>			
+                </div>
+            </div>--><!-- Top Navbar end -->
+			
+            <!-- Navbar -->
+            <nav class="navbar bootsnav">
+                <!-- Top Search -->
+				<hr >
+                <div class="top-search">
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!-- Atribute Navigation -->
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- Header Navigation -->
+				
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+						
+                        <a class="navbar-brand" href=""><img class="logo" src="images/logo2.png" alt=""></a>
+                    </div>
+                    <!-- Navigation -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav menu">
+                            <li><a href="">Home</a></li>                    
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Products</a></li>
+                            <li><a href="#contact_form">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>   
+            </nav><!-- Navbar end -->
+        </header><!-- Header end -->
+
+
+        <section id="home" class="home">
+            <!-- Carousel -->
+			<div>
+			</br>
+			</div>
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <!-- Carousel-inner -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="images/slider_img1.jpg" alt="Construction">
+                        <div class="overlay">
+                            <div class="carousel-caption">
+                                <h3>Our Clients Are Our First Priority</h3>
+                                <h1>WELCOME TO </h1><font  class="cname"> SANJAY TRADERS</font>
+                                
+                                <p>We are well established Marble and Granite Sellers.</br>You will get the best quality here.</p>
+                                <!--<a  class="btn know_btn">know more</a>
+                                <a  class="btn know_btn">view project</a>-->
+                            </div>					
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/slider2.jpg" alt="Construction">
+                        <div class="overlay">
+                            <div class="carousel-caption">
+                                
+                                <h1></h1>
+                                <h1 class="second_heading">Large <font color="#ec4848">Stock</font> of Marble and Granite</h1>
+                                <p>At Sanjay Traders , you will find a good stock available for every kind of stone </p>
+                                <!--<a  class="btn know_btn">know more</a>
+                                <a  class="btn know_btn">view project</a>-->
+                            </div>					
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/slider3.jpg" alt="Construction">
+                        <div class="overlay">
+                            <div class="carousel-caption">
+                                </br></br></br>
+                                <h1 class="second_heading">Use of  <font color="#ec4848"> Machinery </font>for perfection</h1>
+                                <p>We make proper use of cutting and finishing machines to give best to our customers.</p>
+                                <!--<a  class="btn know_btn">know more</a>
+                                <a  class="btn know_btn">view project</a>-->
+                            </div>					
+                        </div>
+                    </div>
+                </div><!-- Carousel-inner end -->
+
+
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                    <span class="fa fa-angle-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                    <span class="fa fa-angle-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div><!-- Carousel end-->
+
+        </section>
+
+
+        <!-- About -->
+        <section id="about">
+		<div>
+			</br>
+			</div>
+            <div class="container about_bg">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6">
+                        <div class="about_content">
+                            <h2>Who we are </h2>
+                            <h3></h3>
+                            <p>Sanjay Traders, sellers of granite ,marbles and marble articles are always ready to serve our customers by meeting their needs
+							in all possible aspects for their utmost satisfaction. Our method is to use our expertise to cater to each customer’s needs by offering excellent 
+							products and services at best prices. With the success of the establishment in Jaipur ,we proceeded further to trading our best products to all other cities possible.
+							With the targets being whole-sellers and residential houses.
+							</p>
+                            <ul>
+								<li>Customer satisfaction is our primary motive
+								<li>We supply to everyone in need of our product
+								<li>Self involvement in purchasing.
+								<li>We maintain a large variety of granite , marble and kota-stone in our warehouse located in Jaipur and Chittorgarh.
+								
+							</ul>
+                           <!--- <a  class="btn know_btn">know more</a>--->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-lg-offset-1">
+                        <div class="about_banner">
+                            <img src="images/who-we-are.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- About end -->
+
+        <!-- Why us -->
+        <section id="why_us">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="head_title">
+                            <h2>WHY CHOOSE US?</h2>
+                            <p></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="why_us_item">
+                            <span class="fa fa-leaf"></span>
+                            <h4>We deliver quality</h4>
+                            <p>We provide the best quality product with the best price available, and does not compromise with it. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="why_us_item">
+                            <span class="fa fa-futbol-o"></span>
+                            <h4>Always on time</h4>
+                            <p>We take each of our customer as our first priority and gives them best service on time with full satisfaction</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="why_us_item">
+                            <span class="fa fa-group"></span>
+                            <h4>We are passionate</h4>
+                            <p>Every person in our team work passionately and with strong dedication. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="why_us_item">
+                            <span class="fa fa-line-chart"></span>
+                            <h4>Professional Services</h4>
+                            <p>Professional service means to us keeping best stock of marble and granite and giving best service and product to our customers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Why us end -->
+
+        <!-- Services -->
+        <section id="services">
+		<div>
+			</br>
+			</div>
+            <div class="container">
+                <h2>OUR SERVICES</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service_item">
+                            <img src="images/whole-sale.jpg" alt="Our Services" />
+                            <h3>WHOLE SALE </h3>
+                            <p>We sell marble and granite in stock to wholesale buyers at best price available. </p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service_item">
+                            <img src="images/retail.jpg" alt="Our Services" />
+                            <h3>RETAIL</h3>
+                            <p>Each type of product is available in retail to our customers</p>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service_item">
+                            <img src="images/transport.jpg" alt="Our Services" />
+                            <h3>TRANSPORT</h3>
+                            <p>We have transport facility available at minimal price throughout the country
+ 							</p>
+                         </br></br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Services end -->
+
+        <!-- Portfolio -->
+        <section id="portfolio">
+		<div>
+			</br>
+			</div>
+            <div class="container portfolio_area text-center">
+                <h2>Products</h2>
+                <p>Our work speaks for itself. Browse some of our finest products below.</p>
+
+                <div id="filters">
+                    <!--<button class="button " data-filter="*">Show All</button>-->
+                    <button class="button is-checked" id="granites" data-filter=".buildings">Granite</button>
+                    <button class="button" data-filter=".interior">Marble</button>
+                    <button class="button" data-filter=".isolation">Kota Stone</button>
+                    <!--<button class="button" data-filter=".plumbing">Plumbing</button>-->
+                </div>
+                <!-- Portfolio grid -->		
+                <div class="grid">
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item  interior">
+                        <img alt="" src="images/Marble/cadbury.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/Marble/cadbury.jpg" data-fancybox-group="gallery" title="Cadbury"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Cadbury</span>
+                        </div>  
+                    </div>
+					<div class="grid-item  interior">
+                        <img alt="" src="images/Marble/fancy_green.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/Marble/fancy_green.jpg" data-fancybox-group="gallery" title="Fancy Green"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Fancy Green</span>
+                        </div>  
+                    </div>
+					
+				
+					
+					
+					
+					<div class="grid-item  interior">
+                        <img alt="" src="images/Marble/fancy_brown.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/Marble/fancy_brown.jpg" data-fancybox-group="gallery" title="Fancy Brown"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Fancy Brown</span>
+                        </div>  
+                    </div>
+					<div class="grid-item  interior">
+                        <img alt="" src="images/Marble/forest_green.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/Marble/forest_green.jpg" data-fancybox-group="gallery" title="Forest Green"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Forest Green</span>
+                        </div>  
+                    </div>
+					<div class="grid-item  interior">
+                        <img alt="" src="images/Marble/jaisalmer_yellow.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/Marble/jaisalmer_yellow.jpg" data-fancybox-group="gallery" title="Jaisalmer Yellow"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Jaisalmer Yellow</span>
+                        </div>  
+                    </div>
+					<div class="grid-item interior">
+                        <img alt="" src="images/Marble/katni.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/Marble/katni.jpg" data-fancybox-group="gallery" title="Katni"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Katni</span>
+                        </div>  
+                    </div>
+					<div class="grid-item  interior">
+                        <img alt="" src="images/Marble/onyx_white.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/Marble/onyx_white.jpg" data-fancybox-group="gallery" title="Onyx White"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Onyx White</span>
+                        </div>  
+                    </div>
+					<div class="grid-item  interior">
+                        <img alt="" src="images/Marble/plain_green.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/Marble/plain_green.jpg" data-fancybox-group="gallery" title="Plain Green"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Plain Green</span>
+                        </div>  
+                    </div>
+					
+
+                    <div class="grid-item buildings  ">
+                        <img alt="" src="images/granite/lakha_red.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/granite/lakha_red.jpg" data-fancybox-group="gallery" title="Lakha Red"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Lakha Red</span>
+                        </div>   
+                    </div>
+					<div class="grid-item buildings  ">
+                        <img alt="" src="images/granite/black_galaxy.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/granite/black_galaxy.jpg" data-fancybox-group="gallery" title="Black Galaxy"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Black Galaxy</span>
+                        </div>   
+                    </div>
+					<div class="grid-item buildings  ">
+                        <img alt="" src="images/granite/cats_eye.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/granite/cats_eye.jpg" data-fancybox-group="gallery" title="Cats Eye"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Cats Eye</span>
+                        </div>   
+                    </div>
+					<div class="grid-item buildings  ">
+                        <img alt="" src="images/granite/chima_pink.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/granite/chima_pink.jpg" data-fancybox-group="gallery" title="Chima Pink"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Chima Pink</span>
+                        </div>   
+                    </div>
+					<div class="grid-item buildings  ">
+                        <img alt="" src="images/granite/hassan_green.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/granite/hassan_green.jpg" data-fancybox-group="gallery" title="Hassan Green"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Hassan Green</span>
+                        </div>   
+                    </div>
+					<div class="grid-item buildings  ">
+                        <img alt="" src="images/granite/imperial_red.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/granite/imperial_red.jpg" data-fancybox-group="gallery" title="Imperial Red"><span class="fa fa-search"></span></a>
+                           <span class="fa " >Imperial Red</span>
+                        </div>   
+                    </div>
+					<div class="grid-item buildings  ">
+                        <img alt="" src="images/granite/kashmir_white.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/granite/kashmir_white.jpg" data-fancybox-group="gallery" title="Kashmir White"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Kashmir White</span>
+                        </div>   
+                    </div>
+					<div class="grid-item buildings  ">
+                        <img alt="" src="images/granite/rosy_pink.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/granite/rosy_pink.jpg" data-fancybox-group="gallery" title="Rosy Pink"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Rosy Pink</span>
+                        </div>   
+                    </div>
+					<div class="grid-item buildings  ">
+                        <img alt="" src="images/granite/ten_brown.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/granite/ten_brown.jpg" data-fancybox-group="gallery" title="Ten Brown"><span class="fa fa-search"></span></a>
+                           <span class="fa " >Ten Brown</span>
+                        </div>   
+                    </div>
+					<div class="grid-item buildings  ">
+                        <img alt="" src="images/granite/rubi_red.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/granite/rubi_red.jpg" data-fancybox-group="gallery" title="Rubi Red"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Rubi Red</span>
+                        </div>   
+                    </div>
+
+                    <div class="grid-item isolation">
+                        <img alt="" src="images/kota_stone/kota_1.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/kota_stone/kota_1.jpg" data-fancybox-group="gallery" title="kota_1"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Pattern 1</span>
+                        </div>  
+                    </div>
+					<div class="grid-item isolation">
+                        <img alt="" src="images/kota_stone/kota_2.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/kota_stone/kota_2.jpg" data-fancybox-group="gallery" title="kota_2"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Pattern 2</span>
+                        </div>  
+                    </div>
+					<div class="grid-item isolation">
+                        <img alt="" src="images/kota_stone/kota_3.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/kota_stone/kota_3.jpg" data-fancybox-group="gallery" title="kota_3"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Pattern 3</span>
+                        </div>  
+                    </div>
+					<div class="grid-item isolation">
+                        <img alt="" src="images/kota_stone/kota_4.jpg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/kota_stone/kota_4.jpg" data-fancybox-group="gallery" title="kota_4"><span class="fa fa-search"></span></a>
+                            <span class="fa " >Pattern 4</span>
+                        </div>  
+                    </div>
+                        
+                </div>
+             </div><!-- Portfolio grid end -->
+            
+        </section><!-- Portfolio end -->
+		
+		
+        <!-- Testimonial -->
+		<section id="testimonial">
+			<div class="container text-center testimonial_area">
+				<h2>We will be happy working with you</h2>
+				<div class="col-md-4">
+							<div class="testimonial_item">
+                            </div>
+                </div>     
+				<div class="col-md-4">
+						<div class="testimonial_item">
+							<img src="images/handshake.jpg" width="100%" alt="" />
+                        </div>
+                </div>     
+			
+			<div>
+				</br>
+				</br>
+			</div>
+		</section>
+       
+		</br>
+
+        <!-- Contact form -->
+        <section id="contact_form">
+			
+            <div class="container">
+                <div class="row" id="contact_details" >
+                    <div class="col-md-6">
+                        <h2>Do you have any questions?</h2>
+                        <h2 class="second_heading">Feel free to contact us!</h2>
+                    </div>
+					<div class="form-inline text-right col-md-6"> 
+                    <!--<form role="form"  name="contactform" class="form-inline text-right col-md-6" >-->
+                        <div class="form-group">
+                            <input type="text"  name="name" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email"  name="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control"  name="message" rows="5" id="msg" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn submit_btn"  onclick="SendEmail();">Submit</button>
+                    <!--</form>	-->		
+					</div>
+                </div>
+				<div style="display:none;" id="thankyou_message" >
+					<h2>Thank You for contacting us.
+						  We will get back to you soon</h2>
+				
+				</div>
+            </div>
+        </section><!-- Contact form end -->
+
+        <!-- Footer -->
+        <footer>
+            <!-- Footer top -->
+            <div class="container footer_top">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-7">
+                        <div class="footer_item">
+                            <h4>About Company</h4>
+                            <img class="logo" src="images/logo2.png" alt="Construction" />
+                            <p>Sanjay Traders, sellers of granite ,marbles and marble articles are always ready to serve our customers by meeting their needs
+							in all possible aspects for their utmost satisfaction.</p>
+
+                            <ul class="list-inline footer_social_icon">
+                                <li><a href="https://www.facebook.com/sanjaytradersjaipur/"  target="_blank" ><span class="fa fa-facebook"></span></a></li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <!--<div class="col-lg-2 col-sm-5">
+                        <div class="footer_item">
+                            <h4>Explore link</h4>
+                            <ul class="list-unstyled footer_menu">
+                                <li><a href=""><span class="fa fa-play"></span> Our services</a>
+                                <li><a href=""><span class="fa fa-play"></span> Meet our team</a>
+                                <li><a href=""><span class="fa fa-play"></span> Forum</a>
+                                <li><a href=""><span class="fa fa-play"></span> Help center</a>
+                                <li><a href=""><span class="fa fa-play"></span> Contact Cekas</a>
+                                <li><a href=""><span class="fa fa-play"></span> Privacy Policy</a>
+                                <li><a href=""><span class="fa fa-play"></span> Cekas terms</a>
+                                <li><a href=""><span class="fa fa-play"></span> Site map</a>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <!--<div class="col-lg-3 col-sm-7">
+                        <div class="footer_item">
+                            <h4>Latest post</h4>
+                            <ul class="list-unstyled post">
+                                <li><a href=""><span class="date">20 <small>AUG</small></span>  Luptatum omittantur duo ne mpetus indoctum</a></li>
+                                <li><a href=""><span class="date">20 <small>AUG</small></span>  Luptatum omittantur duo ne mpetus indoctum</a></li>
+                                <li><a href=""><span class="date">20 <small>AUG</small></span>  Luptatum omittantur duo ne mpetus indoctum</a></li>
+                                <li><a href=""><span class="date">20 <small>AUG</small></span>  Luptatum omittantur duo ne mpetus indoctum</a></li>
+                            </ul>
+                        </div>
+                    </div>-->
+					
+                    <div class="col-lg-2 col-sm-5">
+                        <div class="footer_item">
+                            <h4>Contact us</h4>
+                            <ul class="list-unstyled footer_contact">
+                                <li><a href=""><span class="fa fa-map-marker"></span> B3, Ram Nagar,
+																Bambala Puliya,
+																Tonk Road ,
+																Jaipur(Raj.) , India</a></li>
+                                <li><a href=""><span class="fa fa-envelope"></span> sanjaytraders@gmail.com</a></li>
+                                <li><a href=""><span class="fa fa-mobile"></span><p>+91-9828392330 </p></a></li>
+                            </ul>
+                        </div>
+                    </div>
+					
+					<div class="map col-lg-3 col-sm-5">
+						<div class="footer_item">
+							<h4>Reach Us</h4>
+							<iframe 
+							src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d97.72783436288591!2d75.81779098371103!3d26.792092353280296!2m2!1f277.51098096632506!2f52.62084765898166!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x0%3A0x89a3a7b73141c26f!2sSanjay+Traders+Marble+%26+Granite!5e1!3m2!1sen!2sin!4v1490851636873"
+							width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+							
+						</div>
+					</div>
+					
+					<div class=" col-lg-4 col-sm-5">
+						<div class="footer_item">
+							<h4>Social</h4>
+							<iframe 
+							src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsanjaytradersjaipur%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=288501114664954" 
+							width="100%" height="350" style="border:none;overflow:hidden" 
+							scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+						</div>
+					</div>
+                </div>
+            </div><!-- Footer top end -->
+
+            <!-- Footer bottom -->
+            <div class="footer_bottom text-center">
+                <p class="wow fadeInRight">
+                    Made with 
+                    <i class="fa fa-heart"></i>
+                    by 
+                    <a target="_blank" href="https://www.linkedin.com/in/sonishivam10">Shivam Soni</a> 
+                    2016. All Rights Reserved
+                </p>
+            </div><!-- Footer bottom end -->
+        </footer><!-- Footer end -->
+
+        <!-- JavaScript -->
+        <script src="js/jquery-1.12.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Bootsnav js -->
+        <script src="js/bootsnav.js"></script>
+		<script src="js/contact.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script src="js/isotope.js"></script>
+        <script src="js/isotope-active.js"></script>
+        <script src="js/jquery.fancybox.js?v=2.1.5"></script>
+
+        <script src="js/jquery.scrollUp.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>	
+</html>	
