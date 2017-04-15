@@ -24,11 +24,8 @@
 		<script>
 		function SendEmail(){	
 		debugger;
-		var c_email =new RegExp("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
 		
-		
-			if(c_email.test('#email')===true)
-			{
+			
 			var data={
 			
 			Name:$("#name").val(),
@@ -52,10 +49,8 @@
 				},
 			dataType: "json"
 			});
-			}
-			else{
-				alert("Please enter correct email.");
-			}
+			
+			
 		}
 		
 		</script>
